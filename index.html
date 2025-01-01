@@ -7,23 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="toolbar">
-        <button id="clear">Clear Canvas</button>
-        <label for="bgColor">Canvas Background: </label>
-        <input type="color" id="bgColor" value="#ffffff">    
-        <label for="color">Choose Color: </label>
-        <input type="color" id="color" value="#000000">
-        <label for="thickness">Line Thickness: </label>
-        <input type="range" id="thickness" min="1" max="10" value="5">
-        <button id="eraser">Eraser</button>
-        <label for="eraserSize">Eraser Size: </label>
-        <input type="range" id="eraserSize" min="5" max="50" value="20">
-
+    <div class="main-container">
+        <div class="toolbar">
+            <h2>Toolbox</h2>
+            <button id="freeDraw">Free Draw</button>
+            <button id="rectangle">Rectangle</button>
+            <button id="circle">Circle</button>
+            <button id="eraser">Eraser</button>
+            <label for="color">Line Color:</label>
+            <input type="color" id="color" value="#000000">
+            <label for="thickness">Line Thickness:</label>
+            <input type="range" id="thickness" min="1" max="10" value="5">
+            <label for="eraserSize">Eraser Size:</label>
+            <input type="range" id="eraserSize" min="5" max="50" value="20">
+            <label for="bgColor">Canvas Background:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+            <button id="undo">Undo</button>
+            <button id="redo">Redo</button>
+            <button id="clear">Clear Canvas</button>
+            <button id="submit">Submit</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas" width="900" height="500"></canvas>
+        </div>
     </div>
-    <div class="canvas-container">
-        <canvas id="canvas" width="900" height="500"></canvas>
-    </div>
 
+    <div id="rating-container" style="display: none;">
+        <p>Your drawing has been rated: <span id="rating">0</span>/100</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

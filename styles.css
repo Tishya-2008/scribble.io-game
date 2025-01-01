@@ -1,37 +1,121 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .toolbar {
-    margin-bottom: 10px;
-    text-align: center;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    overflow-y: auto;
 }
 
-canvas {
-    border: 1px solid #000;
-    cursor: crosshair;
+.toolbar h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
 }
 
-button, input {
-    margin-right: 10px;
+.toolbar button, .toolbar input, .toolbar label {
+    width: 100%;
+}
+
+.toolbar button {
+    padding: 10px 15px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toolbar button:hover {
+    background: #2980b9;
+}
+
+.toolbar input[type="color"], .toolbar input[type="range"] {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
 }
 
+.toolbar input[type="range"] {
+    margin-top: 5px;
+}
+
 .canvas-container {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 20px;
 }
 
-#canvas {
-    box-sizing: border-box;
-    background-color: rgb(216, 216, 216);
+canvas {
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: crosshair;
+}
+
+#rating-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(14, 8, 97, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 10px 15px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+#submit{
+    background-color: gold;
+}
+
+#submit:hover{
+    background-color: darkgoldenrod;
 }
